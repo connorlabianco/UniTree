@@ -28,10 +28,17 @@ def clean_formatted_prerequisite(prereq):
 
 # Clean the formatted_prerequisite for each entry
 for entry in data:
-    if 'prereqs' in entry:
-        original = entry['prereqs']
+    if 'processedPrerequisites' in entry:
+        original = entry['processedPrerequisites']
+        original = original.replace('&', 'AND')
         cleaned = clean_formatted_prerequisite(original)
-        entry['prereqs'] = cleaned
+        if cleaned[-2:] == "OR":
+            cleaned = cleaned[:-2]
+        if cleaned[-3:] == "AND":
+            cleaned = cleaned[:-3]
+        if cleaned[-1:] == " ":
+            cleaned = cleaned[:-1]
+        entry['processedPrerequisites'] = cleaned
 
 # Save to a new JSON file
 with open('cleaned_data.json', 'w') as f:
