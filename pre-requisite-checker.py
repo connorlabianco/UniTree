@@ -1,15 +1,21 @@
 import json
+import re
 from collections import deque
 
-# def standardize_course_id(course):
-#     """Standardize course ID by removing spaces."""
-#     return course.replace(" ", "")
+def standardize_course_id(course):
+    """Standardize course ID by removing spaces and HTML tags."""
+    # Remove HTML tags
+    course = re.sub(r"<[^>]*>", "", course)
+    # Remove spaces
+    return course.replace(" ", "")
 
 def build_graph_and_indegree(data):
     """Constructs the course prerequisite graph and computes in-degrees."""
     std_data = {
-        course: [p for p in prereqs]
-        for course, prereqs in data.items()
+        standardize_course_id(course): [
+            standardize_course_id(p) for prereqs in prereqs_list for p in (prereqs if isinstance(prereqs, list) else [prereqs])
+        ]
+        for course, prereqs_list in data.items()
     }
     
     graph = {}

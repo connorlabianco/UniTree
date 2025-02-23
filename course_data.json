@@ -1,13 +1,372 @@
 {
-    "MATH 265": ["MATH 155"],
-    "MATH 270": ["MATH 155"],
-    "MATH 260": ["MATH 155"],
-    "MATH 155": ["MATH 150"],
-    "MATH 150": ["MATH 131"],
-    "MATH 131": ["MATH 126"],
-    "CS 113": ["CS 112"],
-    "CS 112": ["CS 111"],
-    "CS 111": ["MATH 126"],
-    "CS 226": ["CS 111", "MATH 126"],
-    "CS 220": ["CS 112", "MATH 150"]
+    "CMPSC110": [
+        "CMPSC40 AND COMPUTER SCIENCE 32",
+        "CMPSC"
+    ],
+    "CMPSC111": [
+        [
+            "CMPSC4B WITH A GRADE OF C",
+            "CMPSC"
+        ],
+        [
+            "CMPSC6A WITH A GRADE OF C",
+            "CMPSC"
+        ],
+        [
+            "CMPSC24 WITH A GRADE OF C",
+            "CMPSC"
+        ]
+    ],
+    "CMPSC130A": [
+        [
+            "CMPSC40 WITH A GRADE OF C",
+            "CMPSC"
+        ],
+        [
+            "CMPSC32 WITH A GRADE OF C",
+            "CMPSC"
+        ],
+        [
+            "CMPSC120A",
+            "CMPSC139"
+        ],
+        "CMPSC, COMPUTER ENGINEERING, AND ELECTRICAL ENGINEERING MAJORS ONLY"
+    ],
+    "CMPSC130B": [
+        "CMPSC130A"
+    ],
+    "CMPSC132": [],
+    "CMPSC134": [
+        [
+            "CMPSC<P>CMPSC 130B WITH A LETTER GRADE OF B",
+            "CMPSC.</P>"
+        ]
+    ],
+    "CMPSC138": [
+        [
+            "CMPSC40 WITH A GRADE OF C",
+            "CMPSC"
+        ],
+        "CMPSC"
+    ],
+    "CMPSC140": [
+        [
+            "CMPSC4B WITH A GRADE OF C",
+            "CMPSC"
+        ],
+        [
+            "CMPSC6A WITH A GRADE OF C",
+            "CMPSC"
+        ],
+        "CMPSC130A"
+    ],
+    "CMPSC148": [
+        [
+            "CMPSC32 WITH A GRADE OF C",
+            "CMPSC"
+        ],
+        "CMPSC"
+    ],
+    "CMPSC154": [
+        [
+            "CMPSC32 WITH A GRADE OF C",
+            "CMPSC"
+        ],
+        [
+            "CMPSC64 WITH A GRADE OF C",
+            "CMPSC"
+        ]
+    ],
+    "CMPSC156": [
+        [
+            "CMPSC24 AND 32 WITH A GRADE OF C",
+            "CMPSC"
+        ],
+        "CMPSC"
+    ],
+    "CMPSC16": [
+        [
+            "CMPSC3A",
+            "CMPSC2A WITH A GRADE OF C",
+            "CMPSC(MAY BE TAKEN CONCURRENTLY), CS 8",
+            "CMPSC3",
+            "CMPSC3 WITH A GRADE OF C",
+            "CMPSC,",
+            "CMPSC"
+        ]
+    ],
+    "CMPSC160": [
+        [
+            "CMPSC64",
+            "CMPSC154",
+            "CMPSC154A"
+        ],
+        "CMPSC130A",
+        "CMPSC138",
+        "CMPSC"
+    ],
+    "CMPSC161": [],
+    "CMPSC162": [
+        "CMPSC130A AND 138",
+        "CMPSC"
+    ],
+    "CMPSC165A": [
+        "CMPSC130A"
+    ],
+    "CMPSC170": [
+        "CMPSC130A",
+        [
+            "CMPSC, COMPUTER SCIENCE 154",
+            "CMPSC154A (MAY BE TAKEN CONCURRENTLY)"
+        ],
+        [
+            "CMPSC, COMPUTER ENGINEERING",
+            "CMPSC"
+        ]
+    ],
+    "CMPSC171": [
+        "CMPSC130A"
+    ],
+    "CMPSC172": [
+        [
+            "CMPSC130A. OPEN TO COMPUTER SCIENCE",
+            "CMPSC,",
+            "CMPSC"
+        ]
+    ],
+    "CMPSC174A": [
+        "CMPSC130A"
+    ],
+    "CMPSC176A": [
+        [
+            "CMPSC32 WITH A GRADE OF C",
+            "CMPSC"
+        ],
+        [
+            "CMPSC120A",
+            "CMPSC139"
+        ],
+        "CMPSC, ELECTRICAL ENGINEERING, AND COMPUTER ENGINEERING MAJORS ONLY"
+    ],
+    "CMPSC177": [
+        "CMPSC170 (MAY BE TAKEN CONCURRENTLY)"
+    ],
+    "CMPSC178": [
+        [
+            "CMPSC24 WITH A GRADE OF C",
+            "CMPSC"
+        ],
+        [
+            "CMPSC40 WITH A GRADE OF C",
+            "CMPSC"
+        ],
+        [
+            "CMPSC120A",
+            "CMPSC121A",
+            "CMPSC139",
+            "CMPSC"
+        ]
+    ],
+    "CMPSC180": [
+        [
+            "CMPSC130A",
+            "CMPSC"
+        ]
+    ],
+    "CMPSC184": [
+        [
+            "CMPSC56",
+            "CMPSC156"
+        ],
+        "CMPSC130A"
+    ],
+    "CMPSC185": [
+        "CMPSC",
+        "CMPSC, COMPUTER ENGINEERING, AND ELECTRICAL ENGINEERING MAJORS"
+    ],
+    "CMPSC186": [
+        [
+            "CMPSC<P>CMPSC 32",
+            "CMPSC130A.</P>"
+        ]
+    ],
+    "CMPSC188": [
+        "CMPSC<P>OPEN TO COMPUTER SCIENCE AND COMPUTER ENGINEERING MAJORS ONLY.</P>"
+    ],
+    "CMPSC189": [],
+    "CMPSC190": [
+        "CMPSC"
+    ],
+    "CMPSC192": [
+        "CMPSC"
+    ],
+    "CMPSC1921": [],
+    "CMPSC1961": [],
+    "CMPSC196B": [
+        "CMPSC: (1) HAVE TAKEN 4 LETTER GRADED UNITS OF CMPSC 196, (2) HAVE"
+    ],
+    "CMPSC24": [
+        [
+            "CMPSC16 WITH A GRADE OF C",
+            "CMPSC"
+        ],
+        [
+            "CMPSC3B",
+            "CMPSC2B WITH A GRADE OF C",
+            "CMPSC(MAY BE TAKEN CONCURRENTLY)"
+        ]
+    ],
+    "CMPSC32": [
+        [
+            "CMPSC24 WITH A GRADE OF C",
+            "CMPSC"
+        ]
+    ],
+    "CMPSC40": [
+        [
+            "CMPSC16 WITH A GRADE OF C",
+            "CMPSC4A WITH A GRADE OF C",
+            "CMPSC"
+        ]
+    ],
+    "CMPSC64": [
+        [
+            "CMPSC16 WITH A GRADE OF C",
+            "CMPSC"
+        ],
+        [
+            "CMPSC3C",
+            "CMPSC4A WITH A GRADE OF C",
+            "CMPSC"
+        ]
+    ],
+    "CMPSC81": [],
+    "ECE130A": [
+        [
+            "ECE4B",
+            "ECE5A WITH A MINIMUM OF GRADE OF C"
+        ],
+        "ECE"
+    ],
+    "ECE152A": [
+        [
+            "ECE15A AND ECE 2A",
+            "ECE10A & ECE 10AL WITH A MINIMUM GRADE OF C- IN EACH COURSE"
+        ],
+        [
+            "ECE",
+            "ECE30",
+            "ECE64 WITH A MINIMUM GRADE OF C- IN EACH COURSE"
+        ],
+        "ECE, COMPUTER ENGINEERING, AND COMPUTER SCIENCE MAJORS ONLY"
+    ],
+    "ECE153A": [
+        "ECE, COMPUTER SCIENCE AND ELECTRICAL ENGINEERING.  FAMILIARITY WITH C, FINITEAUTOMATA, AND COMPUTER ARCHITECTURE"
+    ],
+    "ECE153B": [
+        "ECE152A WITH A MINIMUM GRADE OF C-"
+    ],
+    "ECE160": [
+        "ECE-DIVISION STANDING",
+        "ECE, COMPUTER ENGINEERING, COMPUTER SCIENCE, AND CREATIVE STUDIES MAJORS ONLY"
+    ],
+    "ECE178": [
+        "ECE, COMPUTER ENGINEERING, AND COMPUTER SCIENCE MAJORS WITH UPPER-DIVISION STANDING"
+    ],
+    "ECE181": [
+        [
+            "ECE-DIVISION STANDING IN ELECTRICAL ENGINEERING, COMPUTER ENGINEERING, COMPUTER SCIENCE, CHEMICAL ENGINEERING",
+            "ECE"
+        ]
+    ],
+    "ENGR101": [
+        "ENGR"
+    ],
+    "ENGR1012": [],
+    "MAJOR45": [],
+    "MAJOR67": [],
+    "MATH108A": [
+        "MATH4A AND 8 EACH WITH A MINIMUM GRADE OF C"
+    ],
+    "MATH119A": [
+        [
+            "MATH4B",
+            "MATH4BI AND 6A WITH A MINIMUM GRADE OF C"
+        ],
+        "MATH8 WITH A MINIMUM GRADE OF C"
+    ],
+    "MATH124A": [
+        [
+            "MATH4B",
+            "MATH4BI, 6A, AND 6B WITH A MINIMUM GRADE OF C"
+        ],
+        "MATH8 WITH A MINIMUM GRADE OF C"
+    ],
+    "MATH3A": [
+        "MATH"
+    ],
+    "MATH3B": [
+        "MATH3A WITH A MINIMUM GRADE OF C"
+    ],
+    "MATH4A": [
+        [
+            "MATH2B",
+            "MATH3B",
+            "MATH3BI WITH A MINIMUM GRADE OF C"
+        ]
+    ],
+    "MATH4B": [
+        [
+            "MATH4A",
+            "MATH4AI WITH A MINIMUM GRADE OF C"
+        ]
+    ],
+    "MATH6A": [
+        [
+            "MATH4A (",
+            "MATH4AI) WITH A LETTER GRADE OF C",
+            "MATH"
+        ]
+    ],
+    "PSTAT120A": [
+        [
+            "PSTAT3C",
+            "PSTAT4A",
+            "PSTAT4AI",
+            "PSTAT6A",
+            "PSTAT6AI COMPLETED WITH A MINIMUM GRADE OF C",
+            "PSTAT"
+        ]
+    ],
+    "PSTAT120B": [
+        [
+            "PSTAT120A WITH A GRADE OF C",
+            "PSTAT"
+        ]
+    ],
+    "PSTAT122": [
+        [
+            "PSTAT10 AND PSTAT 120B BOTH WITH A MINIMUM GRADE OF C",
+            "PSTAT"
+        ]
+    ],
+    "PSTAT130": [
+        [
+            "PSTAT, MATH, COMPUTER SCIENCE",
+            "PSTAT"
+        ]
+    ],
+    "PSTAT160A": [
+        [
+            "PSTAT4A",
+            "PSTAT4AI",
+            "PSTAT5A, MATHEMATICS 8",
+            "PSTAT8, AND PSTAT 120A. A MINIMUM LETTER GRADE OF C",
+            "PSTAT"
+        ]
+    ],
+    "SCIENCE2024": [],
+    "TOTAL12": [],
+    "TOTAL16": [],
+    "TOTAL17": []
 }
