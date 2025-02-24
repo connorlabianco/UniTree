@@ -1,0 +1,184 @@
+{
+    "Chemical Engineering": {
+        "total_units": 187,
+        "preparation_units": 75,
+        "upper_division_units": 81,
+        "required_courses": {
+            "preparation": [
+                ["CH E 5", 3],
+                ["CH E 10", 3],
+                ["CHEM 3A", 4],
+                ["CHEM 3B", 3],
+                ["CHEM 3C", 3],
+                ["CHEM 2AL", 2.5],
+                ["CHEM 2BL", 2.5],
+                ["CHEM 6AL", 3],
+                ["CHEM 6BL", 3],
+                ["CHEM 109A", 4],
+                ["CHEM 109B", 4],
+                ["ENGR 3", 3],
+                ["MATH 3A", 4],
+                ["MATH 3B", 4],
+                ["MATH 4A", 4],
+                ["MATH 4B", 4],
+                ["MATH 6A", 4],
+                ["MATH 6B", 4],
+                ["PHYS 7A", 4],
+                ["PHYS 7B", 4],
+                ["PHYS 7C", 4],
+                ["PHYS 7L", 1]
+            ],
+            "upper_division": [
+                ["CH E 107", 3],
+                ["CH E 110A", 3],
+                ["CH E 110B", 3],
+                ["CH E 118", 1],
+                ["CH E 120A", 4],
+                ["CH E 120B", 3],
+                ["CH E 120C", 3],
+                ["CH E 128", 3],
+                ["CH E 132A", 4],
+                ["CH E 132B", 3],
+                ["CH E 132C", 3],
+                ["CH E 140A", 3],
+                ["CH E 140B", 3],
+                ["CH E 152A", 4],
+                ["CH E 180A", 3],
+                ["CH E 180B", 3],
+                ["CH E 184A", 3],
+                ["CH E 184B", 3],
+                ["CHEM 113B", 4],
+                ["CHEM 113C", 4],
+                ["MATRL 101", 3]
+            ]
+        },
+        "electives": {
+            "required_units": 15,
+            "courses": [
+                ["CH E 102", 3], ["CH E 121", 3], ["CH E 124", 3], ["CH E 125", 3],
+                ["CH E 126", 3], ["CH E 141", 3], ["CH E 146", 3], ["CH E 152B", 3],
+                ["CH E 154", 3], ["CH E 160", 3], ["CH E 166", 3], ["CH E 171", 3],
+                ["CH E 173", 3], ["CH E 174", 3], ["CH E 196", 3], ["CH E 198", 3],
+                ["CHEM 109C", 3], ["CHEM 115A", 3], ["CHEM 115B", 3], ["CHEM 115C", 3],
+                ["CHEM 123", 3], ["CHEM 126", 3], ["CHEM 142A", 3], ["CHEM 142B", 3],
+                ["CHEM 142C", 3], ["CHEM 145", 3], ["CHEM 147", 3], ["CHEM 150", 3],
+                ["ECE 130A", 3], ["ECE 130B", 3], ["ECE 130C", 3], ["ECE 183", 3],
+                ["ENGR 101", 3], ["ENGR 103", 3], ["ENV S 105", 3], ["MATH 122A", 3],
+                ["MATH 122B", 3], ["MATRL 100A", 3], ["MATRL 100B", 3], ["MATRL 135", 3],
+                ["MATRL 160", 3], ["MATRL 185", 3], ["MCDB 101A", 3], ["MCDB 101B", 3],
+                ["MCDB 111", 3], ["MCDB 126A", 3], ["MCDB 126B", 3], ["MCDB 126C", 3],
+                ["MCDB 133", 3], ["MCDB 138", 3], ["ME 110", 3], ["ME 112", 3],
+                ["ME 128", 3], ["ME 134", 3], ["ME 169", 3], ["ME 185", 3],
+                ["PHYS 123A", 3], ["PHYS 123B", 3], ["PHYS 127AL", 3], ["PHYS 127BL", 3]
+            ]
+        }
+    },
+    "Computer Science": {
+        "total_units": 180,
+        "preparation_units": 45,
+        "upper_division_units": 67,
+        "required_courses": {
+            "preparation": [
+                ["CMPSC 16", 4],
+                ["CMPSC 24", 4],
+                ["CMPSC 32", 4],
+                ["CMPSC 40", 5],
+                ["CMPSC 64", 4],
+                ["MATH 3A", 4],
+                ["MATH 3B", 4],
+                ["MATH 4A", 4],
+                ["MATH 4B", 4],
+                ["MATH 6A", 4],
+                ["PSTAT 120A", 4]
+            ],
+            "upper_division": [
+                ["CMPSC 130A", 4],
+                ["CMPSC 130B", 4],
+                ["ENGR 101", 3]
+            ]
+        },
+        "electives": {
+            "required_units": 56,
+            "courses": [
+                ["CMPSC 110", 3], ["CMPSC 111", 3], ["CMPSC 132", 3], ["CMPSC 134", 3],
+                ["CMPSC 138", 3], ["CMPSC 140", 3], ["CMPSC 148", 3], ["CMPSC 153A", 3],
+                ["ECE 153A", 3], ["CMPSC 154", 3], ["CMPSC 156", 3], ["CMPSC 160", 3],
+                ["CMPSC 162", 3], ["CMPSC 165A", 3], ["CMPSC 165B", 3], ["CMPSC 170", 3],
+                ["CMPSC 171", 3], ["CMPSC 172", 3], ["CMPSC 174A", 3], ["CMPSC 174B", 3],
+                ["CMPSC 176A", 3], ["CMPSC 176B", 3], ["CMPSC 176C", 3], ["CMPSC 177", 3],
+                ["CMPSC 178", 3], ["CMPSC 180", 3], ["CMPSC 181", 3], ["ECE 181", 3],
+                ["CMPSC 184", 3], ["CMPSC 185", 3], ["CMPSC 186", 3], ["CMPSC 188", 3],
+                ["CMPSC 189A", 3], ["CMPSC 189B", 3], ["CMPSC 190AA-ZZ", 3],
+                ["CMPSC 192", 3], ["CMPSC 196", 3], ["CMPSC 196B", 3], ["ECE 130A", 3],
+                ["ECE 130B", 3], ["ECE 130C", 3], ["ECE 152A", 3], ["ECE 153B", 3],
+                ["ECE 160", 3], ["ECE 178", 3], ["MATH 108A", 3], ["MATH 108B", 3],
+                ["MATH 119A", 3], ["MATH 119B", 3], ["MATH 124A", 3], ["MATH 124B", 3],
+                ["PSTAT 120B", 3], ["PSTAT 122", 3], ["PSTAT 130", 3], ["PSTAT 160A", 3],
+                ["PSTAT 160B", 3]
+            ]
+        }
+    },
+    "Electrical Engineering": {
+        "total_units": 189,
+        "preparation_units": 83,
+        "upper_division_units": 64,
+        "required_courses": {
+            "preparation": [
+                ["CHEM 1A", 4],
+                ["CMPSC 9", 4],
+                ["ECE 3", 4],
+                ["ECE 5", 4],
+                ["ECE 10A", 3],
+                ["ECE 10AL", 2],
+                ["ECE 10B", 3],
+                ["ECE 10BL", 2],
+                ["ECE 10C", 3],
+                ["ECE 10CL", 2],
+                ["ECE 15A", 4],
+                ["MATH 3A", 4],
+                ["MATH 3B", 4],
+                ["MATH 4A", 4],
+                ["MATH 4B", 4],
+                ["MATH 6A", 4],
+                ["MATH 6B", 4],
+                ["PHYS 7A", 4],
+                ["PHYS 7B", 4],
+                ["PHYS 7C", 4],
+                ["PHYS 7D", 3],
+                ["PHYS 7L", 1],
+                ["ECE 130A", 4],
+                ["ECE 130B", 4],
+                ["ECE 139", 4]
+            ],
+            "upper_division": [
+                ["ECE 134", 4],
+                ["ECE 152A", 5],
+                ["ECE 153A", 4],
+                ["ECE 188A", 4],
+                ["ECE 188B", 4],
+                ["ECE 188C", 4],
+                ["ENGR 101", 3]
+            ]
+        },
+        "electives": {
+            "required_units": 36,
+            "courses": [
+                ["ECE 120A", 3], ["ECE 120B", 3], ["ECE 122A", 3], ["ECE 122B", 3],
+                ["ECE 123", 3], ["ECE 125", 3], ["ECE 130C", 3], ["ECE 132", 3],
+                ["ECE 133", 3], ["ECE 135", 3], ["ECE 136A", 3], ["ECE 136B", 3],
+                ["ECE 136C", 3], ["ECE 137A", 3], ["ECE 137B", 3], ["ECE 141A", 3],
+                ["ECE 141B", 3], ["ECE 142", 3], ["ECE 144", 3], ["ECE 145A", 3],
+                ["ECE 145B", 3], ["ECE 145C", 3], ["ECE 146A", 3], ["ECE 146B", 3],
+                ["ECE 147A", 3], ["ECE 147B", 3], ["ECE 147C", 3], ["ECE 148", 3],
+                ["ECE 149", 3], ["ECE 152B", 3], ["ECE 153A", 3], ["ECE 153B", 3],
+                ["ECE 154A", 3], ["ECE 154B", 3], ["ECE 157A", 3], ["ECE 157B", 3],
+                ["ECE 157C", 3], ["ECE 158", 3], ["ECE 160", 3], ["ECE 162A", 3],
+                ["ECE 162B", 3], ["ECE 162C", 3], ["ECE 178", 3], ["ECE 179D", 3],
+                ["ECE 179P", 3], ["ECE 180", 3], ["ECE 181", 3], ["ECE 183", 3],
+                ["ECE 184", 3], ["ECE 192", 3], ["ECE 196", 3], ["ECE 194AA-ZZ", 3],
+                ["MATRL 100A", 3], ["MATRL 100C", 3], ["MATRL 100B", 3], ["MATRL 101", 3],
+                ["MATRL 162A", 3], ["MATRL 162B", 3], ["TMP 120", 3], ["TMP 122", 3]
+            ]
+        }
+    }
+}
