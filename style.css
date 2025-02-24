@@ -1,0 +1,235 @@
+/* Variables for consistent colors */
+:root {
+    --gold: #B89300;
+    --blue: #14389C;
+    --light-blue: #AFC8FF;
+    --white: #fae2a8;
+    --gray: #eaebec;
+    --table-bg: #ffffff;
+}
+
+/* Base styles */
+body {
+    font-family: 'Roboto Mono', Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, var(--light-blue) 0%, #8AA7FF 100%);
+    margin: 0;
+    padding: 40px 20px;
+    min-height: 100vh;
+    color: #2C3E50;
+}
+
+/* Header Styles */
+h1 {
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.uni {
+    color: var(--gold);
+    font-size: 70px;
+    font-weight: 700;
+}
+
+.tree {
+    color: var(--blue);
+    font-size: 70px;
+    font-weight: 700;
+}
+
+h2 {
+    color: var(--blue);
+    font-size: px;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+h3 {
+    color: var(--blue);
+    font-size: 24px;
+    margin: 25px 0;
+    width: 100%;
+    text-align: center;
+}
+
+/* Container Styles */
+.table-container, .tree-container {
+    margin: 30px auto;
+    padding: 30px;
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(20, 56, 156, 0.1);
+    max-width: 800px;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.table-container:hover {
+    transform: translateY(-5px);
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 20px 0;
+}
+
+th {
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #E0E0E0;
+    color: #2C3E50;
+}
+
+tr:nth-child(even) {
+    background-color: var(--table-bg);
+}
+
+tr:hover {
+    background-color: #F0F4FF;
+}
+
+/* First and last cells in the header */
+th:first-child {
+    border-top-left-radius: 8px;
+}
+
+th:last-child {
+    border-top-right-radius: 8px;
+}
+
+/* Input Field Styles */
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--blue);
+    font-weight: 500;
+}
+
+#classesInput {
+    width: 100%;
+    max-width: 400px;
+    height: 45px;
+    padding: 12px 15px;
+    font-size: 16px;
+    border: 2px solid #E0E0E0;
+    border-radius: 8px;
+    margin: 0 auto 15px auto;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    display: block;
+}
+
+#classesInput:focus {
+    outline: none;
+    border-color: var(--blue);
+    box-shadow: 0 0 0 3px rgba(20, 56, 156, 0.1);
+}
+
+/* Submit Button Styles */
+#submitClasses {
+    width: auto;
+    min-width: 120px;
+    height: 45px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: var(--gold);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 auto;
+    display: block;
+}
+
+#submitClasses:hover {
+    background-color: var(--light-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(20, 56, 156, 0.2);
+}
+
+#submitClasses:active {
+    transform: translateY(0);
+}
+
+/* Entered Classes List Styles */
+#enteredClassesList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#enteredClassesList li {
+    padding: 12px 15px;
+    background-color: var(--white);
+    border-radius: 6px;
+    border-left: 4px solid var(--gold);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+    width: 60%;
+    text-align: center;
+    margin: 0;
+}
+
+#enteredClassesList li:hover {
+    transform: translateX(5px);
+}
+
+/* Quarter and Next styles */
+.quarter {
+    color: var(--white);
+    font-size: 45px;
+}
+
+.next {
+    color: var(--blue);
+    font-size: 45px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 20px 15px;
+    }
+
+    .uni, .tree {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .table-container, .tree-container {
+        padding: 20px;
+    }
+
+    #classesInput {
+        width: calc(100% - 30px);
+    }
+
+    #enteredClassesList li {
+        width: 80%;
+    }
+}
