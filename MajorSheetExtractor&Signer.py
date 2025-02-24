@@ -3,12 +3,25 @@ import requests
 from typing import Dict, List, Optional
 import time
 import os
-from PyPDF2 import PdfReader
 import io
-import pytesseract
-from pdf2image import convert_from_path, convert_from_bytes
 from datetime import datetime
-
+def save_pdf(program_name: str, file_name: str, url: str, pdf_bytes: bytes, base_path: str):
+    """Save downloaded PDF with metadata."""
+    # Create directory if it doesn't exist
+    os.makedirs(base_path, exist_ok=True)
+    
+    # Create a timestamp for the filename
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    
+    # Create filename
+    safe_program_name = "".join(c for c in program_name if c.isalnum() or c in (' ', '-', '_')).strip()
+    filename = f"{timestamp}_{safe_program_name}.pdf"
+    full_path = os.path.join(base_path, filename)
+    
+    # Write PDF content
+    with open(full_path, 'wb') as f:
+        f.write(pdf_bytes)
+        
 def make_request() -> Dict:
     """Make HTTP request to coursedog API and return JSON response."""
     print("Making request to Coursedog API...")
@@ -302,39 +315,37 @@ def save_to_file(program_name: str, file_name: str, url: str, text: str, base_pa
     
     print(f"Saved content to: {full_path}")
 
+
 def process_signed_urls(signed_urls: List[Dict], base_path: str):
-    """Process each signed URL to extract and save PDF text."""
-    print(f"\nProcessing {len(signed_urls)} PDFs...")
+    """Process each signed URL to download and save PDFs."""
+    print(f"\nDownloading {len(signed_urls)} PDFs...")
     
     for i, url_data in enumerate(signed_urls, 1):
-        print(f"\nProcessing PDF {i}/{len(signed_urls)}")
+        print(f"\nDownloading PDF {i}/{len(signed_urls)}")
         print(f"Program: {url_data['program_name']}")
         print(f"File: {url_data['file_name']}")
         
-        # Download PDF
-        print("Downloading PDF...")
-        pdf_bytes = download_pdf(url_data['signed_url'])
-        
-        if pdf_bytes:
-            # Extract text
-            print("Extracting text...")
-            text = extract_text_from_pdf(pdf_bytes)
+        try:
+            # Download PDF
+            print("Downloading PDF...")
+            response = requests.get(url_data['signed_url'])
+            response.raise_for_status()
             
-            # Save results
-            if text:
-                print("Saving extracted text...")
-                save_to_file(
-                    url_data['program_name'],
-                    url_data['file_name'],
-                    url_data['signed_url'],
-                    text,
-                    base_path
-                )
-            else:
-                print("No text could be extracted from this PDF")
+            # Save PDF and metadata
+            save_pdf(
+                url_data['program_name'],
+                url_data['file_name'],
+                url_data['signed_url'],
+                response.content,
+                base_path
+            )
+            
+        except requests.exceptions.RequestException as e:
+            print(f"Error downloading PDF: {str(e)}")
+            continue
         
-        print(f"Completed processing PDF {i}/{len(signed_urls)}")
-        time.sleep(1)  # Add delay between processing files
+        print(f"Completed downloading PDF {i}/{len(signed_urls)}")
+        time.sleep(1)  # Add delay between downloads
 
 def main():
     """Main function to fetch and parse program data."""
@@ -349,18 +360,9 @@ def main():
     # Get signed URLs for all files
     signed_urls = get_signed_urls(programs)
     
-    # Display all information
-    display_program_info(programs, signed_urls)
-
-    base_path = r"C:\Users\bentu\Downloads\VulnTestResult"
-    process_signed_urls(signed_urls, base_path)
-    
-    # Print all signed URLs at the end
-    print("\nAll Signed URLs:")
-    for url_data in signed_urls:
-        print(f"\nProgram: {url_data['program_name']}")
-        print(f"File: {url_data['file_name']}")
-        print(f"URL: {url_data['signed_url']}")
+    # Process and save PDFs
+    pdf_path = r"C:\Users\bentu\Downloads\VulnTestResult\all PDF Major Sheets"
+    process_signed_urls(signed_urls, pdf_path)
     
     print("\nProgram completed successfully!")
 
