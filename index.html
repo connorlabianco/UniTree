@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quarter Plan</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <style>
+        #enteredClassesList {
+            list-style-type: none;  /* Removes bullet points */
+            padding: 0;  /* Removes default padding */
+            margin: 0;  /* Removes default margin */
+        }
+        
+        #enteredClassesList li {
+            margin-bottom: 8px;  /* Adds some spacing between items */
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        <span class="uni">Uni</span><span class="tree">Tree</span>
+    </h1>
+    <h2>Your Next Quarter Planned Out!</h2>
+    <div class="table-container">
+        <span>Classes for Spring 2024:</span>
+        <table id="classTable">
+            <thead>
+                <tr>
+                    <th>Course Name</th>
+                    <th>Units</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Classes will be dynamically inserted here -->
+            </tbody>
+            <tfoot>
+                <tr id="totalsRow">
+                    <td><strong>Total</strong></td>
+                    <td id="totalUnits"></td>
+                    <td id="totalClasses"></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <label for="classesInput">Enter all your classes from the past quarter (separated by commas):</label>
+    <input type="text" id="classesInput" placeholder="e.g. CMPSC 156, CMPSC 170, CMPSC 180">
+    <button id="submitClasses">Submit</button>
+
+    <h3>Entered Classes:</h3>
+    <ul id="enteredClassesList">
+        <!-- Entered classes will be displayed here -->
+    </ul>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Fetch class data from Flask backend
+            fetch('/api/classes')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    const tableBody = document.querySelector("#classTable tbody");
+                    const totalUnitsCell = document.querySelector("#totalUnits");
+                    const totalClassesCell = document.querySelector("#totalClasses");
+
+                    tableBody.innerHTML = '';
+                    let totalUnits = 0;
+
+                    data.forEach(course => {
+                        const row = document.createElement("tr");
+                        row.innerHTML = `
+                            <td>${course.name}</td>
+                            <td>${course.units}</td>
+                            <td>${course.time}</td>
+                        `;
+                        tableBody.appendChild(row);
+                        totalUnits += course.units;
+                    });
+
+                    totalClassesCell.textContent = "";
+                    totalUnitsCell.textContent = totalUnits;
+                })
+                .catch(error => {
+                    console.error('Error fetching class data:', error);
+                    const errorMessage = document.createElement("p");
+                    errorMessage.textContent = "Failed to load class data. Please try again later.";
+                    document.body.appendChild(errorMessage);
+                });
+        });
+
+        document.getElementById('submitClasses').addEventListener('click', () => {
+            const input = document.getElementById('classesInput').value;
+            const classesArray = input.split(',').map(className => className.trim());
+
+            // Send the array to the backend
+            fetch('/api/saveClasses', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ classes: classesArray }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Classes saved successfully:', data);
+
+                // Display the entered classes on the page
+                const enteredClassesList = document.getElementById('enteredClassesList');
+                enteredClassesList.innerHTML = '';  // Clear any previous list
+
+                // Loop through the saved classes and display them
+                data.classes.forEach(className => {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = className;
+                    enteredClassesList.appendChild(listItem);
+                });
+            })
+            .catch(error => {
+                console.error('Error saving classes:', error);
+            });
+        });
+    </script>
+</body>
+</html>
